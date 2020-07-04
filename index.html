@@ -1,9 +1,89 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Unown Command Guide</title
+    <title>Unown Command Guide</title>
+    <style type="text/css">
+      body {
+        font-family: Verdana,Helvetica,Arial,sans-serif;
+      }
+      a, a:link, a:visited {
+        text-decoration: underline solid;
+      }
+      a:visited {color: inherit;}
+      .unown, a.unown:link, a.unown:visited {
+        font-weight: bold;
+        color: #6560EB;
+      }
+      ul.b>li {
+        list-style-type: none;
+      }
+      .cmd::before {
+        content: '@';
+      }
+      details>summary {
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
-    <p>filler</p>
+    <h2>Introduction</h2>
+    <p>This is a command guide for the bot <a href="https://pokemonshowdown.com/users/unown" target="_blank" class="unown">Unown</a> on <a href="https://play.pokemonshowdown.com" target="_blank">Pok&eacute;mon Showdown!</a>. <span class="unown">Unown</span> does not have an auto-invite function. If you would like to add <span class="unown">Unown</span> to your room, please contact Kris on Pok&eacute;mon Showdown!.</p>
+
+    <h2 class='cmd'>etour</h2>
+    <ul class='b'>
+      <li>
+        <details>
+          <summary>Usage</summary>
+          <h3>Arguments</h3>
+          <ul>
+            <li><em>start</em> - starts the tournament, if there is one
+              <ul><li><strong>Aliases:</strong> forcestart</li></ul>
+            </li>
+            <li><em>end</em> - ends the tournament, if there is one
+              <ul><li><strong>Aliases:</strong> forceend</li></ul>
+            </li>
+            <li><em>name [name]</em> - names the current tournament to whatever [name] is
+              <ul><li><strong>Aliases:</strong> setname</li></ul>
+            </li>
+            <li><em>clearname</em> - resets the tournament's name
+              <ul><li><strong>Aliases:</strong> delname</li></ul>
+            </li>
+            <li><em>autostart [number | "off"]</em> - sets the tournament's autostart timer to the provided number or turns it off if "off" is provided
+              <ul><li><strong>Aliases:</strong> setautostart, as</li></ul>
+            </li>
+            <li><em>autodq [number | "off"]</em> - sets the tournament's autodq timer to the provided number or turns it off is "off" is provided
+              <ul><li><strong>Aliases:</strong> setautodq, adq</li></ul>
+            </li>
+            <li><em>dq [username]</em> - disqualifies [username] from the tournament
+              <ul><li><strong>Aliases:</strong> disqualify</li></ul>
+            </li>
+            <li><em>addrule [rule 1, rule 2, rule 3, rule n]</em> - adds the provided rules to a tournament format; the rules get saved in a database for a tournament, so you can send multiple rules on multiple lines if a single line is too long</li>
+            <li><em>delrule [rule 1, rule 2, rule 3, rule n]</em> - removes the provided rules from a tournament format
+              <ul><li><strong>Aliases:</strong> removerule</li></ul>
+            </li>
+            <li><em>ban [item 1, Pok&eacute;mon 1, move 1, ability 1]</em> - bans the provided item/move/ability/Pok&eacute;mon/tier/etc from a tournament format
+              <ul><li><strong>Aliases:</strong> addban</li></ul>
+            </li>
+            <li><em>unban [item 1, Pok&eacute;mon 1, move 1, ability 1]</em> - unbans the provided item/move/ability/Pok&eacute;mon/tier/etc from a tournament format
+              <ul><li><strong>Aliases:</strong> removeban</li></ul>
+            </li>
+            <li><em>clearrules</em> - removes all custom rules from a format</li>
+            <li><em>viewrules</em> - puts the custom tournament rules on display</li>
+            <li><em>scout ["on" | "off"]</em> - enables/disables scouting for tournaments
+              <ul><li><strong>Aliases:</strong> scouting</li></ul>
+            </li>
+            <li><em>modjoin ["on" | "off"]</em> - enables/disables allowing users to modjoin their tournament matches; disabled by default</li>
+            <li><em>cap [number]</em> - sets the tournament's player cap
+              <ul><li><strong>Aliases:</strong> playercap</li></ul>
+            </li>
+            <li><em>[format[, "elim" | "rr"[, player cap[, # of elimination rounds[, name]]]]]</em> - creates a tournament with the following parameters applied; some parameters can be skipped&mdash;for example, you can do <code><span class="cmd">etour gen8ou, elim,,,Name</span></code></li>
+          </ul>
+        </details>
+      </li>
+      <li><strong>Permissions:</strong> <a href="#hosts">Host</a>, %, @, #, &amp;</li>
+    </ul>
+
+    <h2 id="hosts">What are hosts?</h2>
+    <p>Hosts are people whitelisted via the <a href="#tourhost" class='cmd'>tourhost</a> command that are allowed to create tours by proxy of <span class="unown">Unown</span> for <a href="https://www.smogon.com/forums/threads/3615570/" target="_blank">RoA Tour Nights</a>. If you would like to apply to become a host, check out the <a href="https://www.smogon.com/forums/threads/3650020/" target="_blank">host signups thread</a>.</p>
   </body>
 </html>
